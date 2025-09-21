@@ -20,8 +20,9 @@ for sensor in columns:
             print("####################################")
             print("Removing dead sensor "+ sensor)
             print("####################################")
-            new_df = df.drop(sensor, axis=1)
+            df.drop(sensor, axis=1, inplace=True)
 
+new_df = df
 print(new_df)
 
 #Code for Plotly graphs
